@@ -38,11 +38,11 @@ public class MainActivity extends Activity {
     /**
      * 横屏或竖屏
      */
-    private static final Boolean Portrait = false;
+    private static final Boolean Portrait = true;
     /**
      * 目标网址
      */
-    private static final String TargetUrl = "https://m.baidu.com";
+    private static final String TargetUrl = "http://192.168.1.172:7456/";
     /**
      * 注入脚本
      */
@@ -131,7 +131,7 @@ public class MainActivity extends Activity {
         dump("App Created");
 
         // 锁定屏幕方向
-        setRequestedOrientation(Portrait ? ActivityInfo.SCREEN_ORIENTATION_LANDSCAPE : ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
+        setRequestedOrientation(Portrait ? ActivityInfo.SCREEN_ORIENTATION_PORTRAIT : ActivityInfo.SCREEN_ORIENTATION_LANDSCAPE);
 
         // 窗口参数【全屏|防止息屏】
         Window win = getWindow();
